@@ -1,0 +1,52 @@
+.contenedor{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60px 1fr 30px;
+    position: relative;
+}
+
+.contenedor>header{
+    background-color: red;
+}
+.contenedor>main{
+    background-color: yellow;
+}
+.contenedor>nav{
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200px;
+}
+
+.contenedor>footer{
+    background-color: green;
+}
+@media screen and (min-width: 600px) {
+    .contenedor {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            "cabecera cabecera"
+            "menu   principal"
+            "footer footer"
+        ;
+    }
+
+    .contenedor>header {
+        grid-area: cabecera;
+    }
+
+    .contenedor>main {
+        grid-area: principal;
+    }
+
+    .contenedor>nav {
+        grid-area: menu;
+        position: static;
+    }
+
+    .contenedor>footer {
+        grid-area: footer;
+    }
+}

@@ -1,0 +1,29 @@
+.contenedor{
+    height: 100%;
+    background-color: red;
+}
+
+.contenedor>form{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contenedor>form>div{
+    display:grid;
+}
+
+.contenedor>form>a>button{
+    width: 100%;
+}
+
+@media screen and (min-width: 600px)
+{
+    .contenedor{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } 
+}
